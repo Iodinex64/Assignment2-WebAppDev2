@@ -44,5 +44,3 @@ MovieSchema.statics.findByMovieDBLanguage = function (lang) {
 }
 
 export default mongoose.model('Movies', MovieSchema);
-
-
