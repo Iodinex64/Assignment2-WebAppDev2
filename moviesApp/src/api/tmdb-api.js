@@ -81,7 +81,6 @@ export const signup = (username, password) => {
     ).then(res => res.json());
   };
 
-  //TODO: below this line change for movies API
   export const getUpcomingMovies = () => {
     return fetch(
        '/api/movies/upcoming',{headers: {
@@ -91,12 +90,13 @@ export const signup = (username, password) => {
     ).then(res => res.json());
   };
 
-  export const getMovieProviders = id => {
+  export const getMovieProviders = () => {
     return fetch(
-      `https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=${process.env.REACT_APP_TMDB_KEY}`
-    )
-    .then(res => res.json())
-    .then(json => json.results);
+       `/api/movies/${id}/watch/providers`,{headers: {
+         'Authorization': window.localStorage.getItem('token')
+      }
+    }
+    ).then(res => res.json());
   };
 
   export const getMovieCredits = id => {
@@ -105,4 +105,13 @@ export const signup = (username, password) => {
     )
     .then(res => res.json())
     .then(json => json.results);
+  };
+
+  export const getMovieCredits = () => {
+    return fetch(
+       `/api/movies/${id}/watch/providers`,{headers: {
+         'Authorization': window.localStorage.getItem('token')
+      }
+    }
+    ).then(res => res.json());
   };
