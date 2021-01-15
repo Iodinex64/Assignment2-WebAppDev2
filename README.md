@@ -3,9 +3,7 @@
 Name: Sean Duggan
 
 ## Features.
-
-...... A bullet-point list of the ADDITIONAL features you have implemented in the API **THAT WERE NOT IN THE LABS** ......,
- 
+ Everything from labs, plus...
  + Feature 1 - Added extra TMDB routes with parameterized URLs
  + Feature 2 - Extra database quieries to extend Mongo integration with Mongoose
 
