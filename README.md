@@ -60,6 +60,7 @@ JWT is used to authenticate user sessions. Passwords are hashed and salted, user
 ## Integrating with React App
 
 Describe how you integrated your React app with the API. Perhaps link to the React App repo and give an example of an API call from React App. For example: 
+The react app this API was designed for is in this repo. The API communicates with it in the following fashion, replacing the old tmdb/stub implementation:
 
 ~~~Javascript
 export const getMovies = () => {
@@ -74,11 +75,3 @@ export const getMovies = () => {
 };
 
 ~~~
-
-## Extra features
-
-. . Briefly explain any non-standard features, functional or non-functional, developed for the app.  
-
-## Independent learning.
-
-. . State the non-standard aspects of React/Express/Node (or other related technologies) that you researched and applied in this assignment . .  
