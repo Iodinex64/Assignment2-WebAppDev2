@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createContext } from "react";
-import { getGenres } from "../api/tmdb-api";
+import { getGenres } from "../api/moviesApi";
 
 export const GenresContext = createContext(null)
 

@@ -1,5 +1,5 @@
 import express from 'express';
-import { getGenres } from '../tmdb-api';
+import { getGenres } from '../moviesApi';
 
 const router = express.Router();
 
