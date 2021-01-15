@@ -56,7 +56,7 @@ Give an overview of your web API design, perhaps similar to the following:
 | /api/movies/{movieid}/reviews | Get all reviews for movie | Create a new review for Movie | N/A | N/A  
 | /api/genres | Gets a list of all genres | N/A | N/A | N/A
 | /api/users |Gets a list of all users | Creates a user | Changes a user's details | N/A
-| /api/users/{username} | Get {username}'s details | N/A | N/A | Delete {username} from the database
+| /api/users/{username} | Get {username}'s details | N/A | N/A | N/A
 | /api/users{username}/favourites | Get {username}'s favourite movies | Add an entry to {username}'s favourites list | N/A | N/A
 
 ## Security and Authentication
