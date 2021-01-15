@@ -1,31 +1,33 @@
 # Assignment 2 - Web API.
 
-Name: Your Name
+Name: Sean Duggan
 
 ## Features.
 
 ...... A bullet-point list of the ADDITIONAL features you have implemented in the API **THAT WERE NOT IN THE LABS** ......,
  
- + Feature 1 - .... a statement of its purpose/objective ..... 
- + Feature 2 - .......
- + Feature 3 = ......
- + etc
- + etc
+ + Feature 1 - Added extra TMDB routes with parameterized URLs
+ + Feature 2 - Extra database quieries to extend Mongo integration with Mongoose
 
 ## Installation Requirements
 
-Describe what needs to be on the machine to run the API (Node v?, NPM, MongoDB instance, any other 3rd party software not in the package.json). 
+Node and MongoDB will need to be installed and configured on the server/local machine.
 
-Describe getting/installing the software, perhaps:
+1: Clone the repo, optionally via console;
 
 ```bat
-git clone http:\myrepo.git
+git clone https://github.com/iodinex64/Assignment2-WebAppDev2.git
 ```
 
-followed by installation
+2: Install node with npm;
 
 ```bat
-git install
+npm install
+```
+
+3: Run the program with npm.
+```bat
+npm start
 ```
 
 ## API Configuration
