@@ -1,6 +1,6 @@
 # Assignment 2 - Web API.
 
-Name: Sean Duggan
+Name: Sean Duggan W20064774
 
 ## Features.
  Everything from labs, plus...
@@ -29,34 +29,33 @@ npm start
 ```
 
 ## API Configuration
-Describe any configuration that needs to take place before running the API. For example, creating an ``.env`` and what variables to put in it. Give an example of how this might be structured/done.
-REMEMBER: DON'T PUT YOUR OWN USERNAMES/PASSWORDS/AUTH KEYS IN THE README OR ON GITHUB, just placeholders as indicated below:
+You will need to create an .env file and place it in the root directory of the API folder. It should look something like this:
 
 ```bat
 NODE_ENV=development
 PORT=8080
-HOST=
-mongoDB=YourMongoURL
-seedDb=true
-secret=YourJWTSecret
+HOST=localhost <or other if intended use is not local hosting>
+TMDB_KEY=<your tmdb api key>
+mongoDB=<your mongodb url>
+SEED_DB=true
+SECRET=<your jwt secret>
 ```
-
 
 ## API Design
 Give an overview of your web API design, perhaps similar to the following: 
 
 |  |  GET | POST | PUT | DELETE
 | -- | -- | -- | -- | -- 
-| /api/movies |Gets a list of movies | N/A | N/A |
+| /api/movies | Gets a list of movies | N/A | N/A | N/A
 | /api/movies/{movieid} | Get a Movie | N/A | N/A | N/A
 | /api/movies/{movieid}/reviews | Get all reviews for movie | Create a new review for Movie | N/A | N/A  
-| ... | ... | ... | ... | ...
-
-If you have your API design on an online platform or graphic, please link to it (e.g. [Swaggerhub](https://app.swaggerhub.com/)).
-
+| /api/genres | Gets a list of all users | N/A | N/A | N/A
+| /api/users |Gets a list of all users | Creates a user | Changes a user's details | N/A
+| /api/users/{username} | Get {username}'s details | N/A | N/A | Delete {username} from the database
+| /api/users{username}/favourites | Get {username}'s favourite movies | Add an entry to {username}'s favourites list | N/A | N/A
 
 ## Security and Authentication
-Give details of authentication/ security implemented on the API(e.g. passport/sessions). Indicate which routes are protected.
+JWT is used to authenticate user sessions. Passwords are hashed and salted, user related routes are mostly affected.
 
 ## Integrating with React App
 
