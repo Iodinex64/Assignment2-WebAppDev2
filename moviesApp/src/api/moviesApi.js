@@ -81,16 +81,7 @@ export const signup = (username, password) => {
     ).then(res => res.json());
   };
 
-  export const getUpcomingMovies = () => {
-    return fetch(
-       '/api/movies/upcoming',{headers: {
-         'Authorization': window.localStorage.getItem('token')
-      }
-    }
-    ).then(res => res.json());
-  };
-
-  export const getMovieProviders = () => {
+  export const getMovieProviders = (id) => {
     return fetch(
        `/api/movies/${id}/watch/providers`,{headers: {
          'Authorization': window.localStorage.getItem('token')
@@ -99,15 +90,7 @@ export const signup = (username, password) => {
     ).then(res => res.json());
   };
 
-  export const getMovieCredits = id => {
-    return fetch(
-      `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US`
-    )
-    .then(res => res.json())
-    .then(json => json.results);
-  };
-
-  export const getMovieCredits = () => {
+  export const getMovieCredits = (id) => {
     return fetch(
        `/api/movies/${id}/watch/providers`,{headers: {
          'Authorization': window.localStorage.getItem('token')
