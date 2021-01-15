@@ -59,8 +59,9 @@ JWT is used to authenticate user sessions. Passwords are hashed and salted, user
 
 ## Integrating with React App
 
-Describe how you integrated your React app with the API. Perhaps link to the React App repo and give an example of an API call from React App. For example: 
-The react app this API was designed for is in this repo. The API communicates with it in the following fashion, replacing the old tmdb/stub implementation:
+The react app this API was designed for is inside this repo, as it was updated to accomodate the API consequently. The old react app's repo can be found here: https://github.com/Iodinex64/wad2-moviesApp
+
+The API communicates with it in the following fashion, replacing the old tmdb/stub implementation:
 
 ~~~Javascript
 export const getMovies = () => {
