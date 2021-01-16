@@ -24,7 +24,7 @@ export const signup = (username, password) => {
          'Authorization': window.localStorage.getItem('token')
       }
     }
-    ).then(res => res.json()).then(json => {return json.results;});
+    ).then(res => res.json());
   };
   
   export const getMovie = id => {
@@ -33,7 +33,7 @@ export const signup = (username, password) => {
         'Authorization': window.localStorage.getItem('token')
      }
     }
-    ).then(res => res.json()).then(json => {return json.results;});
+    ).then(res => res.json());
   };
 
   export const getGenres = () => {
@@ -51,7 +51,7 @@ export const signup = (username, password) => {
         'Authorization': window.localStorage.getItem('token')
      }
     }
-    ).then(res => res.json()).then(json => {return json.results;});
+    ).then(res => res.json());
   }
 
   export const getUpcomingMovies = () => {
@@ -60,7 +60,7 @@ export const signup = (username, password) => {
          'Authorization': window.localStorage.getItem('token')
       }
     }
-    ).then(res => res.json()).then(json => {return json.results;});
+    ).then(res => res.json());
   };
 
   export const getTopRatedMovies = () => {
@@ -69,7 +69,7 @@ export const signup = (username, password) => {
          'Authorization': window.localStorage.getItem('token')
       }
     }
-    ).then(res => res.json()).then(json => {return json.results;});
+    ).then(res => res.json());
   };
 
   export const getNowPlayingMovies = () => {
@@ -78,7 +78,7 @@ export const signup = (username, password) => {
          'Authorization': window.localStorage.getItem('token')
       }
     }
-    ).then(res => res.json()).then(json => {return json.results;});
+    ).then(res => res.json());
   };
 
   export const getMovieProviders = (id) => {
@@ -87,7 +87,7 @@ export const signup = (username, password) => {
          'Authorization': window.localStorage.getItem('token')
       }
     }
-    ).then(res => res.json()).then(json => {return json.results;});
+    ).then(res => res.json());
   };
 
   export const getMovieCredits = (id) => {
@@ -96,5 +96,5 @@ export const signup = (username, password) => {
          'Authorization': window.localStorage.getItem('token')
       }
     }
-    ).then(res => res.json()).then(json => {return json.results;});
+    ).then(res => res.json());
   };
