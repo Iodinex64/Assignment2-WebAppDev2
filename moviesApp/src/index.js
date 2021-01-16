@@ -29,7 +29,7 @@ const App = () => {
         <AuthHeader />
         <div className="container-fluid">
           <MoviesContextProvider>
-            <GenresContextProvider>    {/* NEW */}
+            <GenresContextProvider>
               <Switch>
           <Route path="/login" component={LoginPage} />
           <Route path="/signup" component={SignUpPage} />
@@ -44,7 +44,7 @@ const App = () => {
           <PrivateRoute path="/" component={HomePage} />
           <Redirect from="*" to="/" />
           </Switch>
-            </GenresContextProvider>    {/* NEW */}
+            </GenresContextProvider>
           </MoviesContextProvider>
         </div>
         </AuthProvider>
