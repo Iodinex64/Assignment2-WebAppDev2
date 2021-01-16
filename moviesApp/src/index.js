@@ -25,7 +25,7 @@ const App = () => {
     <BrowserRouter>
       <div className="jumbotron">
       <AuthProvider>
-        <SiteHeader /> 
+        <SiteHeader />
         <AuthHeader />
         <div className="container-fluid">
           <MoviesContextProvider>
