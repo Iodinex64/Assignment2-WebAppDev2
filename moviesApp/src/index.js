@@ -14,31 +14,42 @@ import NowPlayingMoviesPage from './pages/nowPlayingMoviesPage';
 import MoviesContextProvider from "./contexts/moviesContext";
 import GenresContextProvider from "./contexts/genresContext";
 import AddMovieReviewPage from "./pages/addMovieReviewPage";
+import LoginPage from "./loginPage";
+import SignUpPage from "./signUpPage";
+import PrivateRoute from "./privateRoute";
+import AuthHeader from "./authHeader";
+import AuthProvider from "./authContext";
 
 const App = () => {
   return (
     <BrowserRouter>
+    <AuthProvider>
       <div className="jumbotron">
         <SiteHeader /> 
+        <AuthHeader />
         <div className="container-fluid">
           <MoviesContextProvider>
             <GenresContextProvider>    {/* NEW */}
               <Switch>
-          <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
-          <Route exact path="/movies/watchlist" component={WatchlistMoviesPage} />
-          <Route exact path="/movies/upcoming" component={UpcomingMoviesPage} />
-          <Route exact path="/movies/toprated" component={TopRatedMoviesPage} />
-          <Route exact path="/movies/nowplaying" component={NowPlayingMoviesPage} />
-          <Route exact path="/reviews/form" component={AddMovieReviewPage} />
-          <Route path="/reviews/:id" component={MovieReviewPage} />
-          <Route path="/movies/:id" component={MoviePage} />
+          <PrivateRoute exact path="/movies/favorites" component={FavoriteMoviesPage} />
+          <PrivateRoute exact path="/movies/watchlist" component={WatchlistMoviesPage} />
+          <PrivateRoute exact path="/movies/upcoming" component={UpcomingMoviesPage} />
+          <PrivateRoute exact path="/movies/toprated" component={TopRatedMoviesPage} />
+          <PrivateRoute exact path="/movies/nowplaying" component={NowPlayingMoviesPage} />
+          <PrivateRoute exact path="/reviews/form" component={AddMovieReviewPage} />
+          <PrivateRoute path="/reviews/:id" component={MovieReviewPage} />
+          <PrivateRoute path="/movies/:id" component={MoviePage} />
           <Route path="/" component={HomePage} />
+          <Route path="/public" component={PublicPage} />
+          <Route path="/login" component={LoginPage} />
+          <Route path="/signup" component={SignUpPage} />
           <Redirect from="*" to="/" />
           </Switch>
             </GenresContextProvider>    {/* NEW */}
           </MoviesContextProvider>
         </div>
       </div>
+      </AuthProvider>
     </BrowserRouter>
   );
 };
