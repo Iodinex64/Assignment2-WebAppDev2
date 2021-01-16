@@ -6,6 +6,7 @@ Name: Sean Duggan W20064774
  Everything from labs, plus...
  + Feature 1 - Added extra TMDB routes with parameterized URLs
  + Feature 2 - Extra database quieries to extend Mongo integration with Mongoose
+ + Feature 3 - Private routes enforcing a login to use the app
 
 ## Installation Requirements
 
@@ -47,11 +48,6 @@ Give an overview of your web API design, perhaps similar to the following:
 |  |  GET | POST | PUT | DELETE
 | -- | -- | -- | -- | -- 
 | /api/movies | Gets a list of movies | N/A | N/A | N/A
-| /api/movies/upcoming | Get a list of upcoming movies | N/A | N/A | N/A
-| /api/movies/top_rated | Get a list of top rated movies | N/A | N/A | N/A
-| /api/movies/now_playing | Get a list of movies now playing in cinemas | N/A | N/A | N/A
-| /api/movies/{movieid}/credits | Get a list of people credited for {movieid} | N/A | N/A | N/A
-| /api/movies/{movieid}/watch/providers | Get a list of outlets which sell {movieid} | N/A | N/A | N/A
 | /api/movies/{movieid} | Get a Movie | N/A | N/A | N/A
 | /api/movies/{movieid}/reviews | Get all reviews for movie | Create a new review for Movie | N/A | N/A  
 | /api/genres | Gets a list of all genres | N/A | N/A | N/A
@@ -60,7 +56,7 @@ Give an overview of your web API design, perhaps similar to the following:
 | /api/users{username}/favourites | Get {username}'s favourite movies | Add an entry to {username}'s favourites list | N/A | N/A
 
 ## Security and Authentication
-JWT is used to authenticate user sessions. Passwords are hashed and salted, user related routes are mostly affected.
+JWT is used to authenticate user sessions. Passwords are hashed and salted. The user must first log in to use the app.
 
 ## Integrating with React App
 
