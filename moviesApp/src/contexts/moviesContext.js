@@ -1,4 +1,4 @@
-import React, { useEffect, createContext, useReducer } from "react";
+import React, { useState, useEffect, createContext, useReducer } from "react";
 import { getMovies, getUpcomingMovies, getTopRatedMovies, getNowPlayingMovies } from "../api/moviesApi";
 
 export const MoviesContext = createContext(null);
@@ -43,6 +43,7 @@ const reducer = (state, action) => {
 
 const MoviesContextProvider = (props) => {
   const [state, dispatch] = useReducer(reducer, { movies: [], upcoming: [], toprated: [], nowplaying: [] });
+  const [authenticated, setAuthenticated] = useState(false);
 
   const addToFavorites = (movieId) => {
     const index = state.movies.map((m) => m.id).indexOf(movieId);
@@ -96,6 +97,7 @@ const MoviesContextProvider = (props) => {
         addToFavorites: addToFavorites,
         addToWatchList: addToWatchList,
         addReview: addReview,
+        setAuthenticated
       }}
     >
       {props.children}

@@ -31,6 +31,8 @@ const App = () => {
           <MoviesContextProvider>
             <GenresContextProvider>    {/* NEW */}
               <Switch>
+          <Route path="/login" component={LoginPage} />
+          <Route path="/signup" component={SignUpPage} />
           <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
           <Route exact path="/movies/watchlist" component={WatchlistMoviesPage} />
           <Route exact path="/movies/upcoming" component={UpcomingMoviesPage} />
@@ -40,8 +42,6 @@ const App = () => {
           <Route path="/reviews/:id" component={MovieReviewPage} />
           <Route path="/movies/:id" component={MoviePage} />
           <Route path="/" component={HomePage} />
-          <Route path="/login" component={LoginPage} />
-          <Route path="/signup" component={SignUpPage} />
           <Redirect from="*" to="/" />
           </Switch>
             </GenresContextProvider>    {/* NEW */}
