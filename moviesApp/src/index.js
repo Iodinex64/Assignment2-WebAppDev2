@@ -23,24 +23,23 @@ import AuthProvider from "./authContext";
 const App = () => {
   return (
     <BrowserRouter>
-    <AuthProvider>
       <div className="jumbotron">
+      <AuthProvider>
         <SiteHeader /> 
         <AuthHeader />
         <div className="container-fluid">
           <MoviesContextProvider>
             <GenresContextProvider>    {/* NEW */}
               <Switch>
-          <PrivateRoute exact path="/movies/favorites" component={FavoriteMoviesPage} />
-          <PrivateRoute exact path="/movies/watchlist" component={WatchlistMoviesPage} />
-          <PrivateRoute exact path="/movies/upcoming" component={UpcomingMoviesPage} />
-          <PrivateRoute exact path="/movies/toprated" component={TopRatedMoviesPage} />
-          <PrivateRoute exact path="/movies/nowplaying" component={NowPlayingMoviesPage} />
-          <PrivateRoute exact path="/reviews/form" component={AddMovieReviewPage} />
-          <PrivateRoute path="/reviews/:id" component={MovieReviewPage} />
-          <PrivateRoute path="/movies/:id" component={MoviePage} />
+          <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
+          <Route exact path="/movies/watchlist" component={WatchlistMoviesPage} />
+          <Route exact path="/movies/upcoming" component={UpcomingMoviesPage} />
+          <Route exact path="/movies/toprated" component={TopRatedMoviesPage} />
+          <Route exact path="/movies/nowplaying" component={NowPlayingMoviesPage} />
+          <Route exact path="/reviews/form" component={AddMovieReviewPage} />
+          <Route path="/reviews/:id" component={MovieReviewPage} />
+          <Route path="/movies/:id" component={MoviePage} />
           <Route path="/" component={HomePage} />
-          <Route path="/public" component={PublicPage} />
           <Route path="/login" component={LoginPage} />
           <Route path="/signup" component={SignUpPage} />
           <Redirect from="*" to="/" />
@@ -48,8 +47,8 @@ const App = () => {
             </GenresContextProvider>    {/* NEW */}
           </MoviesContextProvider>
         </div>
+        </AuthProvider>
       </div>
-      </AuthProvider>
     </BrowserRouter>
   );
 };
